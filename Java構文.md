@@ -9,7 +9,7 @@ Javaはクラスを基本に構成される
 
 ### HelloWorldの出力
 #
-```php
+```ruby
 class Greeting {
     public static void main(String[] args) {
         System.out.println("HelloWorld");
@@ -33,7 +33,7 @@ class Greeting {
 #
 ### main関数の処理内容
 #
-```php
+```ruby
         System.out.println("HelloWorld");
     }
 }
@@ -61,7 +61,7 @@ class Greeting {
 ### 応用？
 
 
-```php
+```ruby
 class Greeting {
     public static void main(String[] args) {
         System.out.println("Good monning");
