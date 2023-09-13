@@ -1,14 +1,8 @@
-# Java 基本構文
----
-#
-
-
+# Java 序章
 Javaはクラスを基本に構成される
 クラスは変数・関数の２つから構成される
-#
-
+# 
 ### HelloWorldの出力
-#
 ```ruby
 class Greeting {
     public static void main(String[] args) {
@@ -18,9 +12,8 @@ class Greeting {
 
 >> HelloWorld
 ```
-#
 ### 用語説明
-#
+# 
 - public：外部からアクセス可能→main関数はどこからでも利用できる
 
 - static：staticをつけることで実体はなくても関数が使える→クラスとはデータ型であり、扱うデータの種類・大きさを決める
@@ -30,17 +23,14 @@ class Greeting {
 - main：関数の名前。main関数が一番のポイント
 
 - (String[] args)：外部から投入する値
-#
+# 
 ### main関数の処理内容
-#
 ```ruby
         System.out.println("HelloWorld");
     }
 }
 ```
-#
 ### System.out.printlnについて
-#
 
 - System.out.println：カンタンに文字を出力するための仕組み
 
