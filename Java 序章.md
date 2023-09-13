@@ -3,7 +3,7 @@ Javaはクラスを基本に構成される
 クラスは変数・関数の２つから構成される
 # 
 ### HelloWorldの出力
-```ruby
+```php
 class Greeting {
     public static void main(String[] args) {
         System.out.println("HelloWorld");
@@ -25,7 +25,7 @@ class Greeting {
 - (String[] args)：外部から投入する値
 # 
 ### main関数の処理内容
-```ruby
+```php
         System.out.println("HelloWorld");
     }
 }
@@ -51,7 +51,7 @@ class Greeting {
 ### 応用？
 
 
-```ruby
+```php
 class Greeting {
     public static void main(String[] args) {
         System.out.println("Good monning");
