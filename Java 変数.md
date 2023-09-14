@@ -121,4 +121,22 @@ public class Greeting{
 
 >> 15
 ```
+### インクリメント・デクリメント
+
+**値を１増加・減少させる。→ カウント用の値を更新する場面でよく使われる**
+```ph
+public class Greeting{
+    public static void main(String[] args){
+        int x = 10;
+        int y = 10;
+        x++;
+        y--;
+        System.out.println("xの値:" + x);
+        System.out.println("yの値:" + y);
+    }
+}
+
+>> 11
+   9
+```
 
