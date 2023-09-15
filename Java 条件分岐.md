@@ -1,17 +1,13 @@
 # 条件分岐
 
-### 分岐処理について
+## 構造化プログラミング
 
-1. if文
-2. 等値・関係演算子
-3. if else文
-4. ３つ以上の場合分け
-5. swich case
-# 
+![エビフライトライアングル](https://itmanabi.com/wp-content/uploads/2018/12/seigyokozo.png)
+
+
 ### if文の基本
 ```php
-if（条件式）
-　　　処理; //真の場合実行
+
 ```
 
 ### 等値・演算子
@@ -77,5 +73,7 @@ public class Greeting{
 
 >> 5と10の間にありません
 ```
+
+
 
 
