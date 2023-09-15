@@ -21,9 +21,8 @@ public class Greeting{
 # 
 
 
-### int：データ型
 
-**変数の宣言・代入**
+### 変数の宣言・代入
 
 これから扱うデータの大きさ・種類を表す
 ```php
@@ -51,75 +50,54 @@ public class Greeting{
 >> 10
    15
 ```
-### データ型について
-#
-**代表的なデータ型**
-
-1. データ型６種類
-2. データ型の大きさ
-3. データの種類（整数・実数）
+# 基本データ型
+||型名|格納するデータ|値|利用頻度|
+| ---- | ---- | ---- | ---- | ---- |
+|整数|byte|だいぶ小さい整数|-128～127|△|
+|整数|short|小さい整数| -32,768～32,767|△|
+|整数|int|整数|-2,147,483,648～2,147,483,647|◎|
+|整数|long|大きな整数|-9,223,372,036,854,775,808～9,223,372,036,854,775,807|△|
+|少数|float|少数|32ビット単精度浮動小数点数|△|
+|少数|double|厳密な少数|64ビット倍精度浮動小数点数|〇|
+|文字|char|文字|一文字（Unicode）|〇|
+|真偽値|boolean|trueかflase|true(真)かfalse(偽)|〇|
 # 
+- 整数はデフォルトでint型として、少数はdouble型として扱われる
 
-### データ型大きさ・種類
-
-||大きさ| 種類 |
-|:---:|:----:|:-----:|
-|char|１バイト|文字|
-|short|２バイト|整数|
-|int|４バイト|整数|
-|long|８バイト|整数|
-|float|４バイト|少数|
-|double|８バイト|少数|
-
-**よく使うのは３つだけ**
-
-char・int・double
-
-### doubleとintの変換 （キャストについて）
-
-データ型を強制的に変換する仕組み
-
-例： 少数 → 整数、 整数 → 少数
-
-### キャスト方法
-
+　→float型の少数にはf(F)を、long型の整数にはl(L)をつける
+ 
+- 文字のデータは''で囲む
+# 
+### サンプルコード
 ```php
-public class Greeting{
+public class DataType {
     public static void main(String[] args){
-        double pi = 3.14;
-        System.out.println((int)pi);
-    }
-}
+        int month = 12;
+        int day = 29;
+        float weight = 63.0f;
+        double height = 168.5;
+        char bloodType = 'A';
 
->> 3
+        String name = "管原";
+
+        System.out.println("こんちにちは" + name + "です。");
+        System.out.println("身長" + height + "cm、体重" + weight + "kg、");
+        System.out.println("誕生日は" + month + "月" + day + "日、");
+        System.out.println("血液型は" + bloodType + "型です。");
+    }
+
+>> こんにちは管原です。
+   身長168.5cm、体重63.0kg、
+   誕生日は12月29日、
+   血液型はA型です。
 ```
 
-### 複合代入演算子
-
-変数の値を変数それ自体の値を使って更新 → 値を更新する場面でよく使われる**
-
-**xそれ自体の値を５増やす**
+## 参照型
 ```php
-     int x = 10;
-     x = x + 5;
-
-// シンプルに更新ができる
-
-     int x = 10;
-     x += 5;
+String name = "菅原"
 ```
+- データ自体はメモリ上の別の場所に置かれそのアドレスの値（参照値）が変数に入る
 
-**例**
-```php
-public class Greeting{
-    public static void main(String[] args){
-        int apple = 10;
-        apple += 5;
-        System.out.println(apple);
-    }
-}
-
->> 15
 ```
 ### インクリメント・デクリメント
 
