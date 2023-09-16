@@ -93,3 +93,34 @@ public class MultiArray {
    allScore.lenght:2
    allScore[0].lenght:3
 ```
+補足：それぞれ同じ
+```php
+int[][] allScore = new int[2][3];
+allScore[0][0] = 80;
+allScore[0][1] = 100;
+allScore[0][2] = 75;
+allScore[1][0] = 85;
+allScore[1][1] = 95;
+allScore[1][2] = 80;
+
+
+int[][] allScore = {{80, 100 ,75}, {85, 95, 80}};
+```
+# コマンドラインからの入力
+
+Javaコマンド実行時にプログラムにデータを渡せる
+```php
+public class CmdLine {
+    public static void main(String[] args) {
+        System.out.println("args[0]:" + args[0]);
+        System.out.println("args[1]:" + args[1]);
+        System.out.println("args.length:" + args.length);
+    }
+}
+
+> java CmdLine Hello java
+
+>> args[0]:Hello
+   args[1]:java
+   args.length:2
+```
