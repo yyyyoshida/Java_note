@@ -120,6 +120,26 @@ d = i;　　　　 //自動
 i = (int)d;   //キャストが必要
 
 ```
+### サンプルコード
+
+```php
+public class Cast {
+    public static void main (String[] args) {
+      int price = Integer.parseInt(args[0]);
+      double rate = 0.08;         // 消費税率：８％
+      int amount;
+
+      amount = (int)(price * (1 + rate));   // rate = 2138.4 キャストして小数点を切り捨てる
+      System.out.println("税金金額：" + amount + "円");
+    } 
+}
+
+> java Cast 1980
+
+>> 税金金額：2138円
+
+```
+
 
 
 
@@ -129,6 +149,7 @@ i = (int)d;   //キャストが必要
 
 1980円の物を買って消費税8%がついた場合の総額を計算するとき、
 
+# 
 ### インクリメント・デクリメント
 
 **値を１増加・減少させる。→ カウント用の値を更新する場面でよく使われる**
