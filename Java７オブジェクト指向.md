@@ -94,9 +94,59 @@ class StuSample {
    平均85.0点
 ```
 
+# サンプルコード
+```php
+class Car {
+    //メンバ変数
+    int no;
+    int speed;
+    
+    //メソッド
+    void setNo(int n) {
+        no = n;
+    }
+    void run(int s) {
+        speed = s;
+    }
+    void stop() {
+        speed = 0;
+    }
+    void display() {
+        System.out.println("ナンバー" + no + "速度" + speed);
+    } 
+}
+```
+```php
+class DriveCar {
+    public static void main(String[] args) {
+        //Carクラスのオブジェクトc1を生成
+        Car c1 = new Car();
+
+        //自動者c1のナンバーを2525に設定
+        c1.setNo(2525);
+        //自動車c1の速度を30に設定
+        c1.run(30);
+        //自動車c1のナンバー、速度を表示
+        c1.display();
+        //自動車c1の速度を0に設定
+        c1.stop();
+        //自動車c1のナンバー、速度を表示
+        c1.display();
+    }  
+}
+
+> java DriveCar
+
+>> ナンバー2525速度30
+   ナンバー2525速度0
+```
+
 
 # メソッドの定義
 - 引数：呼び出し元から受け取る値
 - 戻り値：メソッドの処理の後に呼び出し元に返す値→return文で指定する
 - 何も返さない場合は、戻り値の型→voidを記述する
+
+# オーバーロード
+クラス内に同じ名前で引数の型や数が違うメソッドを複数定義することを.オーバーロード
 
