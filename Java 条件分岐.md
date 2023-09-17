@@ -76,55 +76,93 @@ public class Branch1 {
 
 # switch文
 
-### 関係演算子
+### 記述できる値の制限
 
-**記号一覧**
-|>|右辺より左辺が大きい|
-|:---:|:---:|
-|>=|右辺より左辺が大きい or 等しい|
-|<|右辺より左辺が小さい|
-|<=|右辺より左辺が小さい or 等しい|
+switch-case文で使える型は決まっていて、int、short、char、byte、enum、Stringの6つだけ
+
+### 入力する数値に該当する人の入園料が出てくるコード
+
 ```php
-public class Greeting{
-    public static void main(String[] args){
-        int num = 5;
-        if(num > 10)
-            System.out.println("10より大きいです");
-        if(num < 10)
-            System.out.println("10より小さいです");
-        if(num == 10)
-            System.out.println("10と同じです");
+public class Branch2 {
+    public static void main(String[] args) {
+        int num = Integer.parseInt(args[0]);
+        switch(num) {
+            case 1:
+              System.out.println("入園料金:8400円");
+              break;
+            case 2:
+              System.out.println("入園料金:7000円");
+              break;
+            case 3:
+              System.out.println("入園料金:5000円");
+              break;
+            default:
+              System.out.println("1:一般, 2:中・高校生, 3:小学生・幼児");
+        }
+    }  
+}
+
+> java Branch2 0
+
+>> 1:一般, 2:中・高校生, 3:小学生・幼児
+
+
+> java Branch2 1
+
+>> 入園料金:8400円
+
+
+> java Branch2 2
+
+>> 入園料金:7000円
+
+
+> java Branch2 3
+
+>> 入園料金:5000円
+```
+
+
+### 入力する曜日に該当する曜日が出てくるコード
+
+```php
+public class SwitchSample {
+    public static void main(String[] args) {
+        String week = "Friday";
+     
+        switch (week) {
+        case "Sunday":
+            System.out.println("日曜日");
+            break;
+        case "Monday":
+            System.out.println("月曜日");
+            break;
+        case "Tuesday":
+            System.out.println("火曜日");
+            break;
+        case "Wednesday":
+            System.out.println("水曜日");
+            break;
+        case "Thursday":
+            System.out.println("木曜日");
+            break;
+        case "Friday":
+            System.out.println("金曜日");
+            break;
+        case "Saturday":
+            System.out.println("土曜日");
+            break;
+        default:
+            System.out.println("不明な曜日");
+        }
     }
 }
 
->> 10より小さいです
+>> 金曜日
 ```
 
 
-### 論理演算子
 
-複数の条件を統合・条件を反転させるため
-
-**２つの条件を同時に判定**
-
-|&&|右辺・左辺が共に真|
-|:---:|:---:|
-|&#124;&#x7C;|右辺・左辺のどちらかが真|
-|!|真偽を反転|
-
-```php
-public class Greeting{
-    public static void main(String[] args){
-        int num = 20;
-        if(num >= 5 && num <= 10)
-            System.out.println("5と10の間にあります");
-        if(num < 5 || num > 10)
-            System.out.println("5と10の間にありません");
-    }    
-}
-
->> 5と10の間にありません
-```
 
 
 
