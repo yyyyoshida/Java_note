@@ -68,7 +68,7 @@ public class Greeting{
  
 - 文字のデータは''で囲む
 # 
-### サンプルコード
+### サンプルコード１
 ```php
 public class DataType {
     public static void main(String[] args){
@@ -91,6 +91,30 @@ public class DataType {
    誕生日は12月29日、
    血液型はA型です。
 ```
+
+### サンプルコード２
+```php
+public class Triangle {
+        public static void main(String[] args) {
+            int height = Integer.parseInt(args[0]);
+            int width = Integer.parseInt(args[1]);
+            double area;
+
+            area = height * width / 2.0;
+
+            System.out.println("高さ" + height);
+            System.out.println("幅" + width);
+            System.out.println("面積" + area);
+        }
+    }
+
+> java Triangle 5 5
+
+>> 高さ5
+   幅5
+   面積12.5
+```
+
 
 ## 参照型
 ```php
@@ -120,7 +144,7 @@ d = i;　　　　 //自動
 i = (int)d;   //キャストが必要
 
 ```
-### サンプルコード
+### サンプルコード１
 
 ```php
 public class Cast {
@@ -140,7 +164,30 @@ public class Cast {
 
 ```
 
+### サンプルコード２
+```php
+public class Circle {C:\Users\yoshi\OneDrive\デスクトップ\Myjava\Triangle.java
+C:\Users\yoshi\OneDrive\デスクトップ\Myjava\Circle.java
+    public static void main(String[] args) {
+        int radius = Integer.parseInt(args[0]);
+        double pi = 3.141592;
+        double area;
 
+        area = radius * radius * pi;
+
+        //小数点第3位以降切り捨て
+        area = (int)(area * 100);
+        area = area / 100;
+
+        System.out.println("半径：" + radius);
+        System.out.println("面積：" + area);
+    }
+}
+
+> java Circle 10
+>> 半径：10
+   面積：314.15
+```
 
 
 
